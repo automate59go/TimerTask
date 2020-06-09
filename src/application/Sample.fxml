@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <top>
+      <HBox prefHeight="15.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="256.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../resources/image/taskLarge.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="143.0" prefWidth="151.0" text="Total Time past :" />
+            <Label fx:id="mainTimer" prefHeight="143.0" prefWidth="94.0" text="00:00:00">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </Label>
+            <Button fx:id="newTask" mnemonicParsing="false" onAction="#addTask" prefHeight="0.0" prefWidth="102.0" text="+ New Task">
+               <HBox.margin>
+                  <Insets left="25.0" top="61.0" />
+               </HBox.margin>
+               <tooltip>
+                  <Tooltip text="To add a new task" />
+               </tooltip>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <Pane prefHeight="257.0" prefWidth="339.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutY="-23.0" prefHeight="40.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="114.0" prefWidth="246.0" text="Task Name">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="148.0" text="Timer" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="160.0" text="Action" />
+               </children>
+            </HBox>
+            <ListView fx:id="list" layoutY="16.0" prefHeight="253.0" prefWidth="610.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
